@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#0d0b14">
+
+  <title>Only For You ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <!-- =====================================================
+       LOGIN SCREEN
+  ====================================================== -->
+
+  <section id="loginScreen" class="login-screen">
+
+    <div class="login-background"></div>
+
+    <div class="login-card">
+
+      <div class="lock-icon">
+        ♡
+      </div>
+
+      <p class="eyebrow">
+        A LITTLE SECRET
+      </p>
+
+      <h1>
+        Only For You
+      </h1>
+
+      <p class="login-text">
+        There is a little surprise waiting for you...
+      </p>
+
+
+      <div class="input-wrapper">
+
+        <span>♡</span>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter our anniversary date"
+          autocomplete="off"
+        >
+
+      </div>
+
+
+      <button
+        id="unlockBtn"
+        class="unlock-btn"
+      >
+        Unlock My Surprise
+        <span>♡</span>
+      </button>
+
+
+      <p
+        id="error"
+        class="error"
+      >
+        Hmm... that's not the date 🥹
+      </p>
+
+
+      <p class="hint">
+        Hint: The day our story began.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SURPRISE PAGE
+  ====================================================== -->
+
+  <main
+    id="surprise"
+    class="surprise hidden"
+  >
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          YOU MADE IT ♡
+        </p>
+
+        <h2>
+          Happy 5 months Anniversary,
+        </h2>
+
+        <h1>
+          Chit sone Babe
+          <span>♡</span>
+        </h1>
+
+        <p>
+          I made this little corner of the internet
+          just for you.
+        </p>
+
+        <div class="scroll-down">
+          ↓
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <div class="content">
+
+
+      <!-- 13 MEMORIES -->
+
+      <section class="memories">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            OUR STORY
+          </p>
+
+          <h2>
+            13 Special Moments
+            <span>♡</span>
+          </h2>
+
+          <p>
+            A few memories that mean a lot to me.
+          </p>
+
+        </div>
+
+
+
+        <div class="photo-grid">
+
+
+          <!-- PHOTO 1 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo1.jpg')"
+            >
+
+              <img
+                src="images/photo1.jpg"
+                alt="Memory 1"
+              >
+
+              <div class="photo-number">
+                01
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                Our First Memory
+              </h3>
+
+              <p>
+                စစချင်းတွေ့တုန်းက ဟီ”💓
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 2 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo2.jpg')"
+            >
+
+              <img
+                src="images/photo2.jpg"
+                alt="Memory 2"
+              >
+
+              <div class="photo-number">
+                02
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                That Day
+              </h3>
+
+              <p>
+                ရေကူးတုန်းက
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 3 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo3.jpg')"
+            >
+
+              <img
+                src="images/photo3.jpg"
+                alt="Memory 3"
+              >
+
+              <div class="photo-number">
+                03
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                Silly Us
+              </h3>
+
+              <p>
+                ဒါကချစ်လို့saveထားတာ ပို့တုန်းက ပါးယောင်နေတယ်ထင်တာ😂
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 4 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo4.jpg')"
+            >
+
+              <img
+                src="images/photo4.jpg"
+                alt="Memory 4"
+              >
+
+              <div class="photo-number">
+                04
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                A Special Moment
+              </h3>
+
+              <p>
+                ဘုရားသွားရင်း ချစ်ဆုံးဘေဘီနဲ့ အတူတူ ကန်တော့ခဲ့တဲ့ နေရာလေး ပြန်တွေ့လို့💞
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 5 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo5.jpg')"
+            >
+
+              <img
+                src="images/photo5.jpg"
+                alt="Memory 5"
+              >
+
+              <div class="photo-number">
+                05
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                With You
+              </h3>
+
+              <p>
+                ချစ်ဆုံးဘေဘီ ပို့ထားတာလေး random screenshot
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 6 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo6.jpg')"
+            >
+
+              <img
+                src="images/photo6.jpg"
+                alt="Memory 6"
+              >
+
+              <div class="photo-number">
+                06
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                Little Things
+              </h3>
+
+              <p>
+                Minecraft ဆော့တုန်းက ဘေဘီဆောက်ထားတဲ့ဟာကြီး ဘာကြီးမှန်းတော့မသိဘူး😂
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 7 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo7.jpg')"
+            >
+
+              <img
+                src="images/photo7.jpg"
+                alt="Memory 7"
+              >
+
+              <div class="photo-number">
+                07
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                You & Me
+              </h3>
+
+              <p>
+                ကိုယ်တို့ရဲ့ အိမ်လေး💞 အိမ်ဆောက် ကာပယ်😂
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 8 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo8.jpg')"
+            >
+
+              <img
+                src="images/photo8.jpg"
+                alt="Memory 8"
+              >
+
+              <div class="photo-number">
+                08
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                Another Memory
+              </h3>
+
+              <p>
+               ဘေဘီရေးထားတဲ့စာလေး💞
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 9 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo9.jpg')"
+            >
+
+              <img
+                src="images/photo9.jpg"
+                alt="Memory 9"
+              >
+
+              <div class="photo-number">
+                09
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                Happy Moments
+              </h3>
+
+              <p>
+                Roblox သရဲဂိမ်း ကြောက်လို့ထိုင်ခုံက မထရဲဘူး😂
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 10 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo10.jpg')"
+            >
+
+              <img
+                src="images/photo10.jpg"
+                alt="Memory 10"
+              >
+
+              <div class="photo-number">
+                10
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                Happy Moments
+              </h3>
+
+              <p>
+                ချစ်ဆုံးဘေဘီနဲ့ပထမဆုံးတွေ့တဲ့ဆိုင်လေး❤️
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 11 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo11.jpg')"
+            >
+
+              <img
+                src="images/photo11.jpg"
+                alt="Memory 11"
+              >
+
+              <div class="photo-number">
+                11
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                Through Everything
+              </h3>
+
+              <p>
+                တူတူလျှောက်လည်ခဲ့တဲ့နေ့တွေ
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 12 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo12.jpg')"
+            >
+
+              <img
+                src="images/photo12.jpg"
+                alt="Memory 12"
+              >
+
+              <div class="photo-number">
+                12
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                More Memories
+              </h3>
+
+              <p>
+                ပိုက်ဆံအိပ်ထဲနေရာယူထားတာကျန်း
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PHOTO 13 -->
+
+          <article class="photo-card">
+
+            <div
+              class="photo"
+              onclick="openPhoto('images/photo13.jpg')"
+            >
+
+              <img
+                src="images/photo13.jpg"
+                alt="Memory 13"
+              >
+
+              <div class="photo-number">
+                13
+              </div>
+
+              <div class="zoom">
+                +
+              </div>
+
+            </div>
+
+            <div class="photo-text">
+
+              <h3>
+                Forever
+              </h3>
+
+              <p>
+                ဖုန်းထဲကပုံတွေပျက်သွားပေမဲ့ အကြိုက်ဆုံးပုံလေးတွေက အပြင်မှာ ရှိနေပါသေးတယ်နော်
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =====================================================
+           ONE MAIN MESSAGE BOX
+      ====================================================== -->
+
+      <section class="main-message">
+
+        <div class="message-icon">
+          ♡
+        </div>
+
+        <p class="eyebrow">
+          A MESSAGE FOR YOU
+        </p>
+
+        <h2>
+          Something I Want You To Know
+        </h2>
+
+        <div class="message-line"></div>
+
+        <p class="long-message">
+
+          ချစ်ရတဲ့ဘေဘီ,
+
+          Happy 5 months anniversary ပါချစ်ဆုံးဘေဘီ
+          ရန်ဖြစ်လိုက်ပြန်ချစ်လိုက်နဲ့ နှစ်တစ်ဝက်တောင်ပြည့်တော့မယ်နော်
+          အရင်ဆုံးဘေဘီ့ကို စိတ်ညစ်အောင် လုပ်ခဲ့တာတွေအတွက် ကိုကိုတောင်းပန်ပါတယ်နော်
+          စိတ်တိုလို့ပြောမိပေမဲ့ ပြောပြီးရင်ကိုကိုပဲ ဝမ်းနည်းရတာပါ ကိုကိုကလေးဆန်ခဲ့လို့လည်း ပါပါတယ် 
+          အခုကစပြီး ဘေဘီ့ကို စိတ်ညစ်အောင် မလုပ်မိအောင် နေပါ့မယ်နော် အများကြီးလည်းပိုချစ်ပါ့မယ်
+          ကိုကိုလည်းပိုပြီး လိမ္မာပါ့မယ် ဘေဘီ့ကိုပျော်အောင်ထားပါ့မယ်လို့ ကတိပေးပါတယ်နော် 
+          နောက်ထပ်လည်းဘေဘီနဲ့ အမှတ်တရတွေအများကြီးဖန်တီးချင်ပါတယ် 
+          ဒီထက်ပိုချစ်သွားမယ်နော်ဘေဘီ အာဘွား 
+          ချစ်တယ်ဘေဘီ❤️
+
+        </p>
+
+        <div class="signature">
+          — MEO ♡
+        </div>
+
+      </section>
+
+
+
+      <!-- =====================================================
+           MUSIC
+      ====================================================== -->
+
+      <section class="music-section">
+
+        <div class="music-icon">
+          ♪
+        </div>
+
+        <div class="music-info">
+
+          <p class="eyebrow">
+            OUR SONG
+          </p>
+
+          <h2>
+            ဒါလေးနားထောင်ကြည့်😁 ♡
+          </h2>
+
+          <p>
+            Press play and let this song remind you
+            of us.
+          </p>
+
+        </div>
+
+        <button
+          id="musicBtn"
+          class="music-btn"
+        >
+          ▶
+        </button>
+
+        <audio id="music">
+
+          <source
+            src="music/our-song.m4a"
+            type="audio/mpeg"
+          >
+
+        </audio>
+
+      </section>
+
+
+
+      <!-- =====================================================
+           FINAL
+      ====================================================== -->
+
+      <section class="final">
+
+        <div class="final-heart">
+          ♡
+        </div>
+
+        <p class="eyebrow">
+          ONE LAST THING
+        </p>
+
+        <h2>
+          This is only the beginning.
+        </h2>
+
+        <p>
+          Thank you for being part of my story.
+        </p>
+
+        <strong>
+          — Meo ❤️
+        </strong>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FULLSCREEN PHOTO VIEWER
+  ====================================================== -->
+
+  <div
+    id="photoViewer"
+    class="photo-viewer"
+  >
+
+    <button
+      class="close-viewer"
+      onclick="closePhoto()"
+    >
+      ×
+    </button>
+
+    <img
+      id="viewerImage"
+      src=""
+      alt="Full screen memory"
+    >
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

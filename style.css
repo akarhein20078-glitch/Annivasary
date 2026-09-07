@@ -1,0 +1,1103 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0b14;
+  color: #ffffff;
+
+  font-family: "DM Sans", sans-serif;
+
+  overflow-x: hidden;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.login-screen {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      #45203e,
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 80% 80%,
+      #25204a,
+      transparent 35%
+    ),
+
+    #0d0b14;
+
+  overflow: hidden;
+}
+
+
+.login-background {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(13,11,20,.25),
+      rgba(13,11,20,.8)
+    ),
+
+    url("images/photo1.jpg")
+    center / cover;
+
+  opacity: .25;
+
+  filter: blur(2px);
+
+  transform: scale(1.05);
+}
+
+
+.login-card {
+
+  width: 100%;
+  max-width: 420px;
+
+  position: relative;
+
+  z-index: 2;
+
+  padding: 45px 28px;
+
+  text-align: center;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  background: rgba(20,17,28,.75);
+
+  backdrop-filter: blur(25px);
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.5);
+}
+
+
+.lock-icon {
+
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,105,155,.12);
+
+  border: 1px solid rgba(255,105,155,.25);
+
+  color: #ff719d;
+
+  font-size: 32px;
+}
+
+
+.eyebrow {
+
+  color: #ff719d;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+
+.login-card h1 {
+
+  margin: 12px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 46px;
+
+  font-weight: 500;
+}
+
+
+.login-text {
+
+  color: rgba(255,255,255,.55);
+
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+
+/* INPUT */
+
+.input-wrapper {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 16px;
+
+  margin-bottom: 12px;
+
+  border: 1px solid rgba(255,255,255,.13);
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,.05);
+
+  transition: .25s;
+}
+
+.input-wrapper:focus-within {
+
+  border-color: #ff719d;
+
+  box-shadow:
+    0 0 25px rgba(255,113,157,.1);
+}
+
+.input-wrapper span {
+
+  color: #ff719d;
+
+  font-size: 18px;
+}
+
+.input-wrapper input {
+
+  width: 100%;
+
+  padding: 17px 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 15px;
+}
+
+.input-wrapper input::placeholder {
+
+  color: rgba(255,255,255,.35);
+}
+
+
+/* BUTTON */
+
+.unlock-btn {
+
+  width: 100%;
+
+  padding: 17px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #ff5f94;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.unlock-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 35px rgba(255,95,148,.3);
+}
+
+.unlock-btn span {
+
+  margin-left: 8px;
+}
+
+
+.error {
+
+  display: none;
+
+  color: #ff769c;
+
+  margin-top: 15px;
+
+  font-size: 13px;
+}
+
+
+.hint {
+
+  margin-top: 22px;
+
+  color: rgba(255,255,255,.3);
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   UTILITY
+===================================================== */
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =====================================================
+   SURPRISE
+===================================================== */
+
+.surprise {
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(77,34,70,.35),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 90% 50%,
+      rgba(41,35,75,.3),
+      transparent 30%
+    ),
+
+    #0d0b14;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+  min-height: 75vh;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px 20px;
+
+  background:
+    linear-gradient(
+      rgba(13,11,20,.3),
+      rgba(13,11,20,.8)
+    ),
+
+    url("images/photo1.jpg")
+    center / cover;
+}
+
+
+.hero-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 30%,
+      #0d0b14 100%
+    );
+}
+
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 700px;
+}
+
+
+.hero-content h2 {
+
+  margin-top: 15px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(35px, 8vw, 65px);
+
+  font-weight: 500;
+}
+
+
+.hero-content h1 {
+
+  font-family: "Playfair Display", serif;
+
+  font-style: italic;
+
+  font-size: clamp(45px, 11vw, 90px);
+
+  color: #ff719d;
+}
+
+
+.hero-content h1 span {
+
+  color: white;
+
+  font-style: normal;
+}
+
+
+.hero-content > p:last-of-type {
+
+  margin-top: 20px;
+
+  color: rgba(255,255,255,.65);
+
+  font-size: 15px;
+}
+
+
+.scroll-down {
+
+  margin-top: 50px;
+
+  font-size: 25px;
+
+  color: #ff719d;
+
+  animation: bounce 1.5s infinite;
+}
+
+
+@keyframes bounce {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content {
+
+  width: 100%;
+
+  max-width: 1050px;
+
+  margin: auto;
+
+  padding: 70px 18px;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.section-heading {
+
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+
+.section-heading h2 {
+
+  margin: 10px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(30px, 7vw, 48px);
+
+  font-weight: 500;
+}
+
+
+.section-heading h2 span {
+
+  color: #ff719d;
+}
+
+
+.section-heading > p:last-child {
+
+  color: rgba(255,255,255,.45);
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   PHOTO GRID
+===================================================== */
+
+.photo-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* =====================================================
+   PHOTO CARD
+===================================================== */
+
+.photo-card {
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.045);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  transition: .3s;
+}
+
+
+.photo-card:hover {
+
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(255,113,157,.25);
+}
+
+
+.photo {
+
+  position: relative;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+
+.photo img {
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: .5s;
+}
+
+
+.photo:hover img {
+
+  transform: scale(1.06);
+}
+
+
+.photo-number {
+
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+
+  padding: 5px 8px;
+
+  border-radius: 7px;
+
+  background: rgba(0,0,0,.6);
+
+  color: #ff719d;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.zoom {
+
+  position: absolute;
+
+  right: 10px;
+  bottom: 10px;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(0,0,0,.6);
+
+  color: white;
+
+  font-size: 18px;
+}
+
+
+/* TEXT UNDER EACH PHOTO */
+
+.photo-text {
+
+  padding: 14px;
+}
+
+
+.photo-text h3 {
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  margin-bottom: 6px;
+}
+
+
+.photo-text p {
+
+  color: rgba(255,255,255,.48);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   MAIN MESSAGE
+===================================================== */
+
+.main-message {
+
+  margin-top: 70px;
+
+  padding: 32px 22px;
+
+  text-align: left;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,113,157,.08),
+      rgba(255,255,255,.035)
+    );
+
+  border: 1px solid rgba(255,113,157,.15);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.2);
+}
+
+
+.message-icon {
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  background: rgba(255,113,157,.12);
+
+  color: #ff719d;
+
+  font-size: 23px;
+}
+
+
+.main-message h2 {
+
+  margin-top: 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(28px, 7vw, 45px);
+
+  font-weight: 500;
+}
+
+
+.message-line {
+
+  width: 50px;
+
+  height: 2px;
+
+  margin: 20px 0;
+
+  background: #ff719d;
+}
+
+
+.long-message {
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 15px;
+
+  line-height: 2;
+
+  white-space: pre-line;
+}
+
+
+.signature {
+
+  margin-top: 30px;
+
+  text-align: right;
+
+  color: #ff719d;
+
+  font-family: "Playfair Display", serif;
+
+  font-style: italic;
+
+  font-size: 18px;
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+.music-section {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 25px;
+
+  padding: 22px;
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,.045);
+
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+
+.music-icon {
+
+  min-width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ff719d;
+
+  color: white;
+
+  font-size: 23px;
+}
+
+
+.music-info {
+
+  flex: 1;
+}
+
+
+.music-info h2 {
+
+  margin: 5px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+}
+
+
+.music-info p:last-child {
+
+  color: rgba(255,255,255,.4);
+
+  font-size: 12px;
+}
+
+
+.music-btn {
+
+  min-width: 48px;
+  height: 48px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #0d0b14;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+
+.music-btn:hover {
+
+  transform: scale(1.08);
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final {
+
+  text-align: center;
+
+  padding: 130px 10px 40px;
+}
+
+
+.final-heart {
+
+  color: #ff719d;
+
+  font-size: 65px;
+
+  margin-bottom: 20px;
+
+  animation: heartbeat 1.5s infinite;
+}
+
+
+@keyframes heartbeat {
+
+  0%,100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+
+}
+
+
+.final h2 {
+
+  margin: 15px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-style: italic;
+
+  font-size: clamp(30px, 7vw, 55px);
+}
+
+
+.final p {
+
+  color: rgba(255,255,255,.5);
+
+  margin-bottom: 15px;
+}
+
+
+.final strong {
+
+  color: #ff719d;
+
+  font-family: "Playfair Display", serif;
+}
+
+
+/* =====================================================
+   PHOTO VIEWER
+===================================================== */
+
+.photo-viewer {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 999;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(5,4,9,.95);
+
+  backdrop-filter: blur(15px);
+}
+
+
+.photo-viewer.active {
+
+  display: flex;
+}
+
+
+.photo-viewer img {
+
+  max-width: 95vw;
+
+  max-height: 90vh;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.7);
+}
+
+
+.close-viewer {
+
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.1);
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media (min-width: 800px) {
+
+  .content {
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  .photo-grid {
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+
+  .main-message {
+
+    padding: 55px;
+
+  }
+
+
+  .photo-text {
+
+    padding: 18px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .login-card {
+
+    padding: 38px 20px;
+  }
+
+
+  .login-card h1 {
+
+    font-size: 38px;
+  }
+
+
+  .hero {
+
+    min-height: 70vh;
+  }
+
+
+  .content {
+
+    padding-top: 50px;
+  }
+
+
+  .photo-grid {
+
+    gap: 10px;
+  }
+
+
+  .photo-text {
+
+    padding: 11px;
+  }
+
+
+  .photo-text h3 {
+
+    font-size: 14px;
+  }
+
+
+  .photo-text p {
+
+    font-size: 11px;
+  }
+
+
+  .music-section {
+
+    gap: 12px;
+
+    padding: 16px;
+  }
+
+
+  .music-icon {
+
+    min-width: 42px;
+    height: 42px;
+  }
+
+
+  .music-btn {
+
+    min-width: 42px;
+    height: 42px;
+  }
+
+}
